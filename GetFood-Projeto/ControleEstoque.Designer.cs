@@ -97,7 +97,7 @@ namespace GetFood_Projeto
             this.txtConId.Location = new System.Drawing.Point(122, 23);
             this.txtConId.Name = "txtConId";
             this.txtConId.Size = new System.Drawing.Size(100, 20);
-            this.txtConId.TabIndex = 1;
+            this.txtConId.TabIndex = 0;
             // 
             // txtConAlimento
             // 
@@ -111,14 +111,14 @@ namespace GetFood_Projeto
             this.txtConQuantidade.Location = new System.Drawing.Point(122, 82);
             this.txtConQuantidade.Name = "txtConQuantidade";
             this.txtConQuantidade.Size = new System.Drawing.Size(100, 20);
-            this.txtConQuantidade.TabIndex = 1;
+            this.txtConQuantidade.TabIndex = 2;
             // 
             // btnInserir
             // 
             this.btnInserir.Location = new System.Drawing.Point(125, 204);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
-            this.btnInserir.TabIndex = 2;
+            this.btnInserir.TabIndex = 5;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -128,7 +128,7 @@ namespace GetFood_Projeto
             this.btnAtualizar.Location = new System.Drawing.Point(222, 204);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnAtualizar.TabIndex = 2;
+            this.btnAtualizar.TabIndex = 6;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
@@ -138,7 +138,7 @@ namespace GetFood_Projeto
             this.btnDeletar.Location = new System.Drawing.Point(327, 204);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletar.TabIndex = 2;
+            this.btnDeletar.TabIndex = 7;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
@@ -157,14 +157,14 @@ namespace GetFood_Projeto
             this.dtpVencimento.Location = new System.Drawing.Point(125, 136);
             this.dtpVencimento.Name = "dtpVencimento";
             this.dtpVencimento.Size = new System.Drawing.Size(200, 20);
-            this.dtpVencimento.TabIndex = 3;
+            this.dtpVencimento.TabIndex = 4;
             // 
             // btnConsultar
             // 
             this.btnConsultar.Location = new System.Drawing.Point(419, 204);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultar.TabIndex = 2;
+            this.btnConsultar.TabIndex = 8;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);

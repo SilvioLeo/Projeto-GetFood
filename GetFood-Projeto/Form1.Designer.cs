@@ -60,7 +60,7 @@ namespace GetFood_Projeto
             this.txtLoginEmail.Location = new System.Drawing.Point(207, 80);
             this.txtLoginEmail.Name = "txtLoginEmail";
             this.txtLoginEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtLoginEmail.TabIndex = 1;
+            this.txtLoginEmail.TabIndex = 0;
             // 
             // txtLoginSenha
             // 
@@ -84,7 +84,7 @@ namespace GetFood_Projeto
             this.btnCadastrarSe.Location = new System.Drawing.Point(217, 205);
             this.btnCadastrarSe.Name = "btnCadastrarSe";
             this.btnCadastrarSe.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrarSe.TabIndex = 2;
+            this.btnCadastrarSe.TabIndex = 3;
             this.btnCadastrarSe.Text = "Cadastrar-se";
             this.btnCadastrarSe.UseVisualStyleBackColor = true;
             this.btnCadastrarSe.Click += new System.EventHandler(this.btnCadastrarSe_Click);

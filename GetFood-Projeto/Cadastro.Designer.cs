@@ -43,7 +43,7 @@ namespace GetFood_Projeto
             this.btnCadCadastrar.Location = new System.Drawing.Point(199, 185);
             this.btnCadCadastrar.Name = "btnCadCadastrar";
             this.btnCadCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadCadastrar.TabIndex = 0;
+            this.btnCadCadastrar.TabIndex = 3;
             this.btnCadCadastrar.Text = "Cadastrar";
             this.btnCadCadastrar.UseVisualStyleBackColor = true;
             this.btnCadCadastrar.Click += new System.EventHandler(this.btnCadCadastrar_Click);
@@ -62,7 +62,7 @@ namespace GetFood_Projeto
             this.txtCadEmail.Location = new System.Drawing.Point(188, 60);
             this.txtCadEmail.Name = "txtCadEmail";
             this.txtCadEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtCadEmail.TabIndex = 2;
+            this.txtCadEmail.TabIndex = 0;
             // 
             // label2
             // 
@@ -78,7 +78,7 @@ namespace GetFood_Projeto
             this.txtCadSenha.Location = new System.Drawing.Point(188, 98);
             this.txtCadSenha.Name = "txtCadSenha";
             this.txtCadSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtCadSenha.TabIndex = 2;
+            this.txtCadSenha.TabIndex = 1;
             // 
             // label3
             // 
