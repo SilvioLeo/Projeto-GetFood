@@ -216,6 +216,7 @@ namespace GetFood_Projeto
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(532, 150);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label6
             // 
@@ -236,7 +237,7 @@ namespace GetFood_Projeto
             this.btnCadLimpar.ForeColor = System.Drawing.Color.White;
             this.btnCadLimpar.Location = new System.Drawing.Point(562, 72);
             this.btnCadLimpar.Name = "btnCadLimpar";
-            this.btnCadLimpar.Size = new System.Drawing.Size(87, 23);
+            this.btnCadLimpar.Size = new System.Drawing.Size(87, 25);
             this.btnCadLimpar.TabIndex = 10;
             this.btnCadLimpar.Text = "Limpar";
             this.btnCadLimpar.UseVisualStyleBackColor = false;

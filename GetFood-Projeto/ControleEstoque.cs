@@ -154,5 +154,15 @@ namespace GetFood_Projeto
             dtpVencimento.ResetText();
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //txtId.Text = Convert.ToString(dgvMenuAlimentos.Rows[e.RowIndex].Cells[0].Value);
+            txtConId.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            txtConAlimento.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            txtConQuantidade.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
+            dtpFabricacao.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+            dtpVencimento.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+        }
     }
 }
