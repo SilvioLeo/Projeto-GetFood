@@ -21,16 +21,27 @@ namespace GetFood_Projeto
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            int idAlimento = int.Parse(txtConId.Text);
-            string alimento = txtConAlimento.Text, quantidade = txtConQuantidade.Text;
-            DateTime dataF = DateTime.Parse(dtpFabricacao.Text), dataV = DateTime.Parse(dtpVencimento.Text);
+            if(txtConId.Text == "")
+            {
+                MessageBox.Show("Prencha todos os campos", "erro ao inserir", MessageBoxButtons.OK);
 
-            con.Open();
-            SqlCommand cmd = new SqlCommand("EXEC Inserir_Alimento '"+ idAlimento + "','" + alimento + "','" + quantidade + "','" + dataF + "','" + dataV + "'", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Inserido com sucesso!!!");
-            MostrarGrid();
+            }
+            else
+            {
+
+                int idAlimento = int.Parse(txtConId.Text);
+                string alimento = txtConAlimento.Text, quantidade = txtConQuantidade.Text;
+                DateTime dataF = DateTime.Parse(dtpFabricacao.Text), dataV = DateTime.Parse(dtpVencimento.Text);
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand("EXEC Inserir_Alimento '"+ idAlimento + "','" + alimento + "','" + quantidade + "','" + dataF + "','" + dataV + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Inserido com sucesso!!!");
+                MostrarGrid();
+                LimparCampos();
+
+            }
         }
 
         private void MostrarGrid()
@@ -52,46 +63,96 @@ namespace GetFood_Projeto
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            int idAlimento = int.Parse(txtConId.Text);
-            string alimento = txtConAlimento.Text, quantidade = txtConQuantidade.Text;
-            DateTime dataF = DateTime.Parse(dtpFabricacao.Text), dataV = DateTime.Parse(dtpVencimento.Text);
 
-            con.Open();
-            SqlCommand cmd = new SqlCommand("EXEC Atualizar_Alimento '" + idAlimento + "','" + alimento + "','" + quantidade + "','" + dataF + "','" + dataV + "'", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Atualizado com sucesso!!!");
-            MostrarGrid();
+            if(txtConId.Text == "")
+            {
+                MessageBox.Show("Insira o id do alimento que deseje atualizar", "erro ao atualizar", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+
+                int idAlimento = int.Parse(txtConId.Text);
+                string alimento = txtConAlimento.Text, quantidade = txtConQuantidade.Text;
+                DateTime dataF = DateTime.Parse(dtpFabricacao.Text), dataV = DateTime.Parse(dtpVencimento.Text);
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand("EXEC Atualizar_Alimento '" + idAlimento + "','" + alimento + "','" + quantidade + "','" + dataF + "','" + dataV + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Atualizado com sucesso!!!");
+                MostrarGrid();
+
+            }
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Tem certeza que quer deletar?","Deletar alimentos",MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+
+            if(txtConId.Text == "")
             {
+                MessageBox.Show("Digite o id do alimento que deseje deletar", "erro ao deletar", MessageBoxButtons.OK);
 
-                int idAlimento = int.Parse(txtConId.Text);
+            }
+            else
+            {
+                if(MessageBox.Show("Tem certeza que quer deletar?","Deletar alimentos",MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
 
-                con.Open();
-                SqlCommand cmd = new SqlCommand("EXEC Deletar_Alimento '" + idAlimento + "'", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Deletado com sucesso!!!");
-                MostrarGrid();
+                    int idAlimento = int.Parse(txtConId.Text);
+
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("EXEC Deletar_Alimento '" + idAlimento + "'", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Deletado com sucesso!!!");
+                    MostrarGrid();
+                    LimparCampos();
+                }
+
+
             }
             
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if(txtConId.Text == "")
+            {
 
-            int idAlimento = int.Parse(txtConId.Text);
+                MessageBox.Show("Primeiro digite um id para consultar", "Didite um id", MessageBoxButtons.OK);
+               
+            }
+            else
+            {
+               
 
-            SqlCommand cmd = new SqlCommand("EXEC Consultar_Alimento '" + idAlimento + "'", con);
-            SqlDataAdapter sd = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sd.Fill(dt);
+                int idAlimento = int.Parse(txtConId.Text);
 
-            dataGridView1.DataSource = dt;
+                SqlCommand cmd = new SqlCommand("EXEC Consultar_Alimento '" + idAlimento + "'", con);
+                SqlDataAdapter sd = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
+        }
+
+        private void btnCadLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+            MostrarGrid();
+        }
+
+        private void LimparCampos()
+        {
+            txtConId.Clear();
+            txtConAlimento.Clear();
+            txtConQuantidade.Clear();
+            dtpFabricacao.ResetText();
+            dtpVencimento.ResetText();
+
         }
     }
 }

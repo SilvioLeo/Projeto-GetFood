@@ -39,7 +39,7 @@ namespace GetFood_Projeto
             }
             else
             {
-                MessageBox.Show("Verifique se o email e senha estão corretos!!", "Erro no login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Verifique se o email ou senha estão corretos!!", "Erro no login", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }

@@ -188,6 +188,7 @@ namespace GetFood_Projeto
             this.Controls.Add(this.btnCadCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
             this.Load += new System.EventHandler(this.Cadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

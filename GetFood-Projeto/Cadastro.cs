@@ -26,32 +26,42 @@ namespace GetFood_Projeto
 
         private void btnCadCadastrar_Click(object sender, EventArgs e)
         {
-            if (VerificarCadastroUsuario())
+            if(txtCadEmail.Text == "" || txtCadSenha.Text == "")
             {
+                MessageBox.Show("Prencha todos os campos", "Erro ao cadastrar", MessageBoxButtons.OK);
 
-                if (txtCadSenha.Text.Equals(txtCadConfSenha.Text))
-                {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO tabela_Usuarios(email, senha) VALUES('" + txtCadEmail.Text.Trim() + "','" + txtCadSenha.Text.Trim() + "')", con);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Cadastrado com sucesso", "Cadastro realizado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-
-                    ControleEstoque controleEstoque = new ControleEstoque();
-                    controleEstoque.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("Senha e confirmar senha precisão ser iguais", "Senhas não correspondem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                }
             }
             else
             {
-                MessageBox.Show("Email já cadastrado", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (VerificarCadastroUsuario())
+                {
+
+                    if (txtCadSenha.Text.Equals(txtCadConfSenha.Text))
+                    {
+                        SqlCommand cmd = new SqlCommand("INSERT INTO tabela_Usuarios(email, senha) VALUES('" + txtCadEmail.Text.Trim() + "','" + txtCadSenha.Text.Trim() + "')", con);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Cadastrado com sucesso", "Cadastro realizado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+
+                        ControleEstoque controleEstoque = new ControleEstoque();
+                        controleEstoque.Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senha e confirmar senha precisão ser iguais", "Senhas não correspondem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Email já cadastrado", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
            
 
