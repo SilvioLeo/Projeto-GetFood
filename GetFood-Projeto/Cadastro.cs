@@ -70,5 +70,17 @@ namespace GetFood_Projeto
             return true;
 
         }
+
+        private void btnCadSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCadVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
     }
 }
