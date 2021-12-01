@@ -45,9 +45,9 @@ namespace GetFood_Projeto
                         con.Close();
                         MessageBox.Show("Cadastrado com sucesso", "Cadastro realizado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-
-                        ControleEstoque controleEstoque = new ControleEstoque();
-                        controleEstoque.Show();
+                        Form1 form1 = new Form1();
+                        form1.Show();
+                       
 
                     }
                     else
