@@ -46,7 +46,7 @@ namespace GetFood_Projeto
             // 
             // btnCadCadastrar
             // 
-            this.btnCadCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnCadCadastrar.BackColor = System.Drawing.Color.Navy;
             this.btnCadCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadCadastrar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@ namespace GetFood_Projeto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(304, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
@@ -82,7 +82,7 @@ namespace GetFood_Projeto
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(304, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 16);
@@ -102,7 +102,7 @@ namespace GetFood_Projeto
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(304, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 16);
@@ -131,8 +131,9 @@ namespace GetFood_Projeto
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(219, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 32);
@@ -156,7 +157,7 @@ namespace GetFood_Projeto
             // 
             // btnCadVoltar
             // 
-            this.btnCadVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnCadVoltar.BackColor = System.Drawing.Color.Navy;
             this.btnCadVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadVoltar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,7 +174,7 @@ namespace GetFood_Projeto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(605, 319);
             this.Controls.Add(this.btnCadVoltar);
             this.Controls.Add(this.btnCadSair);
