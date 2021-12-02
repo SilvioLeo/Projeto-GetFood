@@ -78,4 +78,4 @@ begin
 SELECT * FROM tabela_Alimentos
 end
 ```
-### Com o banco já criado basta conectar o visual Studio com o banco Sql e trocar a string de conexão que está no inicio do codigo de cada formulário e pronto o projeto já deve está funcionando localmente na sua máquina  
+### Com o banco já criado basta conectar o visual Studio com o banco Sql e trocar a string de conexão que está no inicio do codigo de cada formulário. E pronto o projeto já deve está funcionando localmente na sua máquina  
