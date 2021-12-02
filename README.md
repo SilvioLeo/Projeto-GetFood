@@ -1,5 +1,5 @@
 # GetFood
-## Esse projeto que foi desenvolvido para o 3º período do curso de ADS consiste  na criação de um app desktop para Windows, rodando com banco de dados local, com as seguintes funcionalidades:
+## Esse projeto que foi desenvolvido para o 3º período do curso de ADS consiste na criação de um app desktop para Windows, rodando com banco de dados local, com as seguintes funcionalidades:
 <!--ts-->
   * Login
   * Cadastro
@@ -10,8 +10,8 @@
     * Consultar Alimentos
 <!--ts-->
 # Como Usar
-## Como o app foi desenvolvido com um banco de dados Sql local é preciso fazer a configuração do Sql e do Visual Studio manualmente.
-### Antes de tudo é presciso dar um git clone no projeto depois basta abrir o Sql management studio e fazer a criação do banco com os seguintes comandos:
+## Como o app foi desenvolvido com um banco de dados Sql local, é preciso fazer a configuração do Sql e do Visual Studio manualmente.
+### Antes de tudo é presciso dar um git clone no projeto depois, basta abrir o Sql management studio e fazer a criação do banco com os seguintes comandos:
 
 ```sql
 
