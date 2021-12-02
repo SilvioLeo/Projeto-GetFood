@@ -21,25 +21,34 @@ namespace GetFood_Projeto
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            if(txtConId.Text == "")
+            if (VerificarIdAlimento())
             {
-                MessageBox.Show("Prencha todos os campos", "erro ao inserir", MessageBoxButtons.OK);
+                if(txtConId.Text == "")
+                {
+                    MessageBox.Show("Prencha todos os campos", "erro ao inserir", MessageBoxButtons.OK);
+
+                }
+                else
+                {
+
+                    int idAlimento = int.Parse(txtConId.Text);
+                    string alimento = txtConAlimento.Text, quantidade = txtConQuantidade.Text;
+                    DateTime dataF = DateTime.Parse(dtpFabricacao.Text), dataV = DateTime.Parse(dtpVencimento.Text);
+
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("EXEC Inserir_Alimento '"+ idAlimento + "','" + alimento + "','" + quantidade + "','" + dataF + "','" + dataV + "'", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Inserido com sucesso!!!");
+                    MostrarGrid();
+                    LimparCampos();
+
+                }
 
             }
             else
             {
-
-                int idAlimento = int.Parse(txtConId.Text);
-                string alimento = txtConAlimento.Text, quantidade = txtConQuantidade.Text;
-                DateTime dataF = DateTime.Parse(dtpFabricacao.Text), dataV = DateTime.Parse(dtpVencimento.Text);
-
-                con.Open();
-                SqlCommand cmd = new SqlCommand("EXEC Inserir_Alimento '"+ idAlimento + "','" + alimento + "','" + quantidade + "','" + dataF + "','" + dataV + "'", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Inserido com sucesso!!!");
-                MostrarGrid();
-                LimparCampos();
+                MessageBox.Show("Id já cadastrado", "Insira  outro id", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -163,6 +172,20 @@ namespace GetFood_Projeto
             txtConQuantidade.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
             dtpFabricacao.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             dtpVencimento.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+        }
+
+        private bool VerificarIdAlimento()
+        {
+            string query = "SELECT * FROM tabela_Alimentos WHERE id_Alimentos = '" + txtConId.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                return false;
+            }
+            return true;
+
         }
     }
 }
