@@ -21,19 +21,17 @@ GO
 
 
 CREATE TABLE [dbo].[tabela_Usuarios](
-	[idUsuarios] [int] IDENTITY(1,1) NOT NULL,
+	[idUsuarios] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	[email] [varchar](100) NOT NULL,
-	[senha] [varchar](50) NOT NULL,
- CONSTRAINT [PK_tabela_Usuarios] PRIMARY KEY CLUSTERED 
+	[senha] [varchar](50) NOT NULL,);
 
 
 CREATE TABLE [dbo].[tabela_Alimentos](
-	[id_Alimentos] [int] NOT NULL,
+	[id_Alimentos] [int] NOT NULL PRIMARY KEY,
 	[alimento] [varchar](50) NULL,
 	[quantidade] [varchar](50) NULL,
 	[dataF] [datetime] NULL,
-	[dataV] [datetime] NULL,
- CONSTRAINT [PK_tabela_Alimentos] PRIMARY KEY CLUSTERED 
+	[dataV] [datetime] NULL,);
 
 CREATE PROC [dbo].[Atualizar_Alimento]
 @id_Alimentos int,
