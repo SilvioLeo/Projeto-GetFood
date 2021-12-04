@@ -23,7 +23,7 @@ GO
 CREATE TABLE [dbo].[tabela_Usuarios](
 	[idUsuarios] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	[email] [varchar](100) NOT NULL,
-	[senha] [varchar](50) NOT NULL,);
+	[senha] [varchar](50) NOT NULL);
 
 
 CREATE TABLE [dbo].[tabela_Alimentos](
@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[tabela_Alimentos](
 	[alimento] [varchar](50) NULL,
 	[quantidade] [varchar](50) NULL,
 	[dataF] [datetime] NULL,
-	[dataV] [datetime] NULL,);
+	[dataV] [datetime] NULL);
 
 CREATE PROC [dbo].[Atualizar_Alimento]
 @id_Alimentos int,
